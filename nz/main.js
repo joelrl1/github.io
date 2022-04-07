@@ -8,6 +8,12 @@ console.log(coords);
 console.log(coords[0]);
 console.log(coords[1]);
 console.log(coords.length);
+
+console.log("text");
+console.log('text');
+console.log( 'id= "map"');
+console.log(`latitude= ${lat}`);
+
 let map = L.map('map').setView(coords, zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
