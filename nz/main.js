@@ -14,6 +14,8 @@ console.log('text');
 console.log( 'id= "map"');
 console.log(`latitude= ${lat}`);
 
+console.log(ETAPPEN);
+
 let popup = `<h3> Lissabon </h3>
 <ul>
 <li>geogr. Länge: ${lng } 
