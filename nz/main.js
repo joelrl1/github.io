@@ -26,7 +26,7 @@ let popup = `<h3> ${ETAPPEN[0].titel}(Etappe ${ETAPPEN[0].nr}) </h3>
 <li>geogr. Länge: ${ETAPPEN[0].lng } </li>
 <li>geogr. Breite: ${ETAPPEN[0].lat } </li>
 <li> <a href= "${ ETAPPEN[0].wikipedia}">Link zur Wikipediaseite</a> </li>
-<li> <a href= "${ETAPPEN[0].github}">Link zur Etappenseite</a> </li>
+<li> <a href= "${ETAPPEN[0].github}.github.io/nz/">Link zur Etappenseite</a> </li>
 
 
 </ul>
@@ -42,3 +42,18 @@ L.marker(coords).addTo(map)
     .bindPopup(popup)
     .openPopup(); 
 
+for (let etappe of ETAPPEN) {
+   
+
+    let popup = `<h3> ${ETAPPEN[etappe.nr].titel}(Etappe ${ETAPPEN[0].nr}) </h3>
+    <ul>
+    <li>geogr. Länge: ${ETAPPEN[etappe.nr].lng } </li>
+    <li>geogr. Breite: ${ETAPPEN[etappe.nr].lat } </li>
+    <li> <a href= "${ ETAPPEN[etappe.nr].wikipedia}">Link zur Wikipediaseite</a> </li>
+    <li> <a href= "${ETAPPEN[etappe.nr].github}.github.io/nz/">Link zur Etappenseite</a> </li>
+    
+    
+    </ul>
+     `;
+     L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
+}
