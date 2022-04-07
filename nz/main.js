@@ -14,6 +14,14 @@ console.log('text');
 console.log( 'id= "map"');
 console.log(`latitude= ${lat}`);
 
+let popup = `<h3> Lissabon </h3>
+<ul>
+<li>geogr. Länge: ${lng } <li>
+<li>geogr. Breite: ${lat } <li>
+
+<ul>
+ `;
+
 let map = L.map('map').setView(coords, zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -21,6 +29,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker(coords).addTo(map)
-    .bindPopup("<h3> Lissabon </h3>")
+    .bindPopup(popup)
     .openPopup(); 
 
