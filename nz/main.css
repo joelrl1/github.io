@@ -73,7 +73,9 @@ img.banner{
     padding: 0.5em;
     width: 2em;
     text-align: center;
-    display: block;
-    
+    margin-top: 0.5em;
+    display : inline-block;
+
+
 
 }
