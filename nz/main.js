@@ -16,8 +16,8 @@ console.log(`latitude= ${lat}`);
 
 let popup = `<h3> Lissabon </h3>
 <ul>
-<li>geogr. Länge: ${lng } <li>
-<li>geogr. Breite: ${lat } <li>
+<li>geogr. Länge: ${lng } 
+<li>geogr. Breite: ${lat }
 
 <ul>
  `;
