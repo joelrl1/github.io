@@ -77,7 +77,7 @@ const ETAPPEN = [{
     "lng": 174.006
 }, {
     "nr": 12,
-    "github": "kelevra22",
+    "github": "joelrl1",
     "titel": "Wellington",
     "wikipedia": "https://de.wikipedia.org/wiki/Wellington",
     "lat": -41.288889,
