@@ -65,11 +65,11 @@ footer {
     padding: 1em 2em 3em 2em;
 }
 
-footer.back {
+footer .back {
     float: left;
 }
 
-footer.next {
+footer .next {
     float: right;
 }
 
