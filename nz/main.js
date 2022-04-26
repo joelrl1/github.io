@@ -1,9 +1,9 @@
 //Portugalreise Skript
-let lat = 38.716667;
-let lng= -9.166667;
+let lat = -41.288889;
+let lng= 174.777222;
 let zoom= 13;
 
-let coords= [38.716667, -9.166667];
+let coords= [-41.288889, 174.777222];
 //console.log(coords)
 //console.log(coords[0]);
 //console.log(coords[1]);
@@ -31,12 +31,12 @@ let coords= [38.716667, -9.166667];
 // coords sind die Koordinaten
 
 let popup = `
-<h3> ${ETAPPEN[3].titel} (Etappe ${ETAPPEN[3].nr}) </h3>
+<h3> ${ETAPPEN[11].titel} (Etappe ${ETAPPEN[11].nr}) </h3>
 <ul>
-<li>geogr. Länge: ${ETAPPEN[3].lng}</li>
-<li>geogr. Breite: ${ETAPPEN[3].lat}</li>
-<li><a href="${ETAPPEN[3].wikipedia}">Link zur Wikipediaseite</a></li>
-<li><a href="${ETAPPEN[3].github}">Link zur Etappenseite</a></li>
+<li>geogr. Länge: ${ETAPPEN[11].lng}</li>
+<li>geogr. Breite: ${ETAPPEN[11].lat}</li>
+<li><a href="${ETAPPEN[11].wikipedia}">Link zur Wikipediaseite</a></li>
+<li><a href="${ETAPPEN[11].github}">Link zur Etappenseite</a></li>
 </ul>
 `;
 
