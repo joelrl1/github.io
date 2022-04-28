@@ -97,3 +97,11 @@ img.banner {
 
 
 }
+.etappeAktuell{
+    background: silver;
+    color:white;
+    text-decoration:none;
+    pointer-events: none;
+
+    
+}

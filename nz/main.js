@@ -57,15 +57,18 @@ let popup = `
 <li><a href="https://${etappe.github}.github.io/nz/">Link zur Etappenseite</a></li>
 </ul>
 `;
+let navClass = "etappenLink";
 let mrk =L.marker([coords]).addTo(map)
 .bindPopup(popup)
 .openPopup();
 if(etappe.nr==13){
     mrk.openPopup();
+    navClass="etappenLink etappeAktuell";
 }
 
 //Etappennavigation erweitern
-let link =` <a href="https://${etappe.github}.github.io/nz/" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
+let link =` <a href="https://${etappe.github}.github.io/nz/" 
+class="${navClass}" title="${etappe.titel}">${etappe.nr}</a>`;
 
 document.querySelector("#navigation").innerHTML += link;
 
