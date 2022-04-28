@@ -2,7 +2,7 @@
 
 let zoom= 13;
 
-let coords= [-41.288889, 174.777222];
+let coords= [ETAPPEN[12].lat, ETAPPEN[12].lng]; // NR prüfen!
 //console.log(coords)
 //console.log(coords[0]);
 //console.log(coords[1]);
