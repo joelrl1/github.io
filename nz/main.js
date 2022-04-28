@@ -1,6 +1,5 @@
 //Portugalreise Skript
-let lat = -41.288889;
-let lng= 174.777222;
+
 let zoom= 13;
 
 let coords= [-41.288889, 174.777222];
@@ -30,15 +29,7 @@ let coords= [-41.288889, 174.777222];
 
 // coords sind die Koordinaten
 
-let popup = `
-<h3> ${ETAPPEN[11].titel} (Etappe ${ETAPPEN[11].nr}) </h3>
-<ul>
-<li>geogr. Länge: ${ETAPPEN[11].lng}</li>
-<li>geogr. Breite: ${ETAPPEN[11].lat}</li>
-<li><a href="${ETAPPEN[11].wikipedia}">Link zur Wikipediaseite</a></li>
-<li><a href="${ETAPPEN[11].github}">Link zur Etappenseite</a></li>
-</ul>
-`;
+
 
 // popup Liste erstellt 
 
@@ -66,8 +57,7 @@ let popup = `
 <li><a href="https://${etappe.github}.github.io/nz/">Link zur Etappenseite</a></li>
 </ul>
 `;
-//console.log(etappe);
-L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
+
 
 //Etappennavigation erweitern
 let link =` <a href="https://${etappe.github}.github.io/nz/" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
