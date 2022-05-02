@@ -41,9 +41,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([coords]).addTo(map)
-.bindPopup(popup)
-.openPopup();
+
 
 
 for (let etappe of ETAPPEN) {
@@ -57,14 +55,13 @@ let popup = `
 <li><a href="https://${etappe.github}.github.io/nz/">Link zur Etappenseite</a></li>
 </ul>
 `;
+
 let navClass = "etappenLink";
-let mrk =L.marker([coords]).addTo(map)
-.bindPopup(popup)
-.openPopup();
-if(etappe.nr==11){
-    mrk.openPopup();
-    navClass="etappenLink etappeAktuell";
-}
+    let mrk = L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
+    if (etappe.nr == 12) {
+        mrk.openPopup();
+        navClass = "etappenLink etappeAktuell";
+    }
 
 //Etappennavigation erweitern
 let link =` <a href="https://${etappe.github}.github.io/nz/" 
