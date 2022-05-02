@@ -96,3 +96,38 @@ L.circleMarker([hut.lat, hut.lng],{
     
 }).addTo(map).bindPopup(popup);
 }
+
+// Code für Massstab, andere Layer, fullscreen und minimap
+
+let startLayer = L.tileLayer.provider("Esri.WorldStreetMap");
+
+
+
+let layerControl = L.control.layers({
+    "Esri World Street Map": startLayer,
+    
+    "Esri World Imagery": L.tileLayer.provider("Esri.WorldImagery"),
+    "Open Topo Map": L.tileLayer.provider("OpenTopoMap"),
+    "Esri Ocean Basemap": L.tileLayer.provider("Esri.OceanBasemap"),
+ 
+}).addTo(map);
+
+layerControl.expand();
+
+let sightLayer = L.featureGroup();
+
+
+
+
+sightLayer.addTo(map);
+
+// Maßstab hinzufügen
+L.control.scale({
+    imperial: false,
+}).addTo(map);
+
+L.control.fullscreen().addTo(map);
+
+let miniMap = new L.Control.MiniMap(
+    L.tileLayer.provider("BasemapAT")
+).addTo(map);
