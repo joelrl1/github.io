@@ -2,7 +2,7 @@
 
 let zoom= 13;
 
-let coords= [ETAPPEN[12].lat, ETAPPEN[12].lng]; // NR prüfen!
+let coords= [ETAPPEN[11].lat, ETAPPEN[11].lng]; // NR prüfen!
 //console.log(coords)
 //console.log(coords[0]);
 //console.log(coords[1]);
@@ -61,7 +61,7 @@ let navClass = "etappenLink";
 let mrk =L.marker([coords]).addTo(map)
 .bindPopup(popup)
 .openPopup();
-if(etappe.nr==13){
+if(etappe.nr==11){
     mrk.openPopup();
     navClass="etappenLink etappeAktuell";
 }
@@ -95,6 +95,7 @@ statusColor="green";
     statusColor="red";
 }
 L.circleMarker([hut.lat, hut.lng],{
-    color: statusColor
+    color: statusColor,
+    radius:50
 }).addTo(map).bindPopup(popup);
 }
