@@ -35,11 +35,14 @@ let coords= [ETAPPEN[11].lat, ETAPPEN[11].lng]; // NR prüfen!
 
 let map = L.map('map').setView(coords, zoom);
 
-// let sind die Variablen
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+
+let startLayer = L.tileLayer.provider("Esri.WorldStreetMap").addTo(map); // anfangskarte ist startlayer 
+
+
+// openstreetmap wirde wegen startlayer nicht mehr benötigt
+
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 
 
 
@@ -99,7 +102,7 @@ L.circleMarker([hut.lat, hut.lng],{
 
 // Code für Massstab, andere Layer, fullscreen und minimap
 
-let startLayer = L.tileLayer.provider("Esri.WorldStreetMap");
+
 
 
 
